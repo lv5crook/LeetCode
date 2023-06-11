@@ -1,0 +1,21 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] myarr = new int[2];
+        boolean isthere = false;
+        for (int i = 0; i < nums.length; i++){
+            if(isthere){
+                break;
+            }
+            for (int k = 0; k < nums.length; k++){
+                if(nums[i]+nums[k]==target){
+                    if(i!=k){
+                        myarr[0] = i;
+                        myarr[1] = k;
+                        isthere = true;
+                    }
+            }
+            }
+        }
+        return myarr;
+    }
+}
